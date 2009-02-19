@@ -1,0 +1,3 @@
+h3. About
+
+The purpose of this mini-project is to scrub player stats from the CA website.
