@@ -1,0 +1,14 @@
+<% title "Players" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% for player in @players %>
+    <tr>
+      <td><%=h player.name %></td>
+      <td><%= link_to "Show", player %></td>
+    </tr>
+  <% end %>
+</table>
+
