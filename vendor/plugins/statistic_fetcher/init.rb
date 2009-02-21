@@ -1,0 +1,1 @@
+require "statistic_fetcher"
