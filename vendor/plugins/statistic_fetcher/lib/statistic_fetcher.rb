@@ -1,5 +1,4 @@
 require 'scrubyt'
-require 'pp'
 
 class StatisticFetcher
   
@@ -23,6 +22,4 @@ class StatisticFetcher
 
     data
   end
-  
 end
-
