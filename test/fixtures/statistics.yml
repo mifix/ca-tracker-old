@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  player_id: 1
+  experience: 1
+  rank: 1
+  kd_ratio: 1.5
+  gear_points: 1
+
+two:
+  player_id: 1
+  experience: 1
+  rank: 1
+  kd_ratio: 1.5
+  gear_points: 1

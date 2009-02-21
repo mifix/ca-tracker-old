@@ -7,7 +7,7 @@
   <% for player in @players %>
     <tr>
       <td><%=h player.name %></td>
-      <td><%= link_to "Show", player %></td>
+      <td><%= link_to "Show stats", player_statistics_path(player) %></td>
     </tr>
   <% end %>
 </table>

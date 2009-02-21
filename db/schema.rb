@@ -9,10 +9,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090221120043) do
+ActiveRecord::Schema.define(:version => 20090221120939) do
 
   create_table "players", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "statistics", :force => true do |t|
+    t.integer  "player_id"
+    t.integer  "experience"
+    t.integer  "rank"
+    t.float    "kd_ratio"
+    t.integer  "gear_points"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
