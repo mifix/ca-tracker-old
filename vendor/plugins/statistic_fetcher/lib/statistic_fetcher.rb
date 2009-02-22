@@ -13,13 +13,19 @@ class StatisticFetcher
         experience  '/dd[5]'
         gear_points '/dd[6]'
       end
-    end.to_hash.shift
-
+      
+      lvl '//span[@class="level"]' do
+        images '//img' do
+          level_image_url "src", :type => :attribute 
+        end
+      end
+    end.to_hash
+ 
     # Remove formatting of numbers
-    data[:experience].gsub!(/,/, '')
-    data[:gear_points].gsub!(/,/, '')
-    data[:rank].gsub!(/,/, '')
-
+    data[0][:experience].gsub!(/,/, '')
+    data[0][:gear_points].gsub!(/,/, '')
+    data[0][:rank].gsub!(/,/, '')
+    
     data
   end
 end

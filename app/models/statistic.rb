@@ -5,7 +5,10 @@ class Statistic < ActiveRecord::Base
     players = Player.find(:all)
     
     players.each do |player|
-      player.statistics.create( StatisticFetcher.fetch_for(player.name) )
+      stats, level_image = StatisticFetcher.fetch_for(player.name)
+      player.statistics.create( stats )
+      player.level_image_url = level_image[:level_image_url]
+      player.save
     end
   end
   
