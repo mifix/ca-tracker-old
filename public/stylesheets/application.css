@@ -78,3 +78,9 @@ a {
   font-size: 12px;
   list-style: disc;
 }
+
+.graph {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px; 
+}
