@@ -1,24 +1,32 @@
 <% title "Statistics for #{@player.name}" %>
 
-<table>
-  <tr>
-    <th>Experience</th>
-    <th>Rank</th>
-    <th>Kd Ratio</th>
-    <th>Gear Points</th>
-    <th>Created_at</th>
-  </tr>
-  <% for statistic in @statistics %>
+<table id="hor-minimalist-a">
+  <thead>
+    <tr>
+      <th>Experience</th>
+      <th>Rank</th>
+      <th>Kd Ratio</th>
+      <th>Gear Points</th>
+      <th>Created_at</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for statistic in @statistics %>
     <tr>
       <td><%=h statistic.experience %></td>
       <td><%=h statistic.rank %></td>
       <td><%=h statistic.kd_ratio %></td>
       <td><%=h statistic.gear_points %></td>
-      <td><%=h statistic.created_at %></td>
+      <td><%=h statistic.created_at.to_s(:short) %></td>
     </tr>
-  <% end %>
+    <% end %>
+  </tbody>
+ <tfoot>
+ </tfoot>
 </table>
 
 <br />
 
-<%= link_to 'Back to players', players_path %>
+<%= link_to 'Back to players', players_path %> <br />
+
+<%= render :partial => 'graphs', :locals => { :player_statistics => @statistics } %>

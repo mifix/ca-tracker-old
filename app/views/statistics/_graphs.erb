@@ -1,0 +1,17 @@
+<% time = player_statistics.map{ |d| d[:created_at].to_s(:short)}  %>
+
+<div class='graph'>
+  <%= image_tag line_chart_url(:title => 'Experience',  :y => player_statistics.map{|d| d[:experience]}, :x => time) %>
+</div> 
+
+<div class='graph'>
+  <%= image_tag line_chart_url(:title => 'Gear Points', :y => player_statistics.map{|d| d[:gear_points]}, :x => time) %>
+</div>
+
+<div class='graph'>
+  <%= image_tag line_chart_url(:title => 'K/D Ratio', :y => player_statistics.map{|d| d[:kd_ratio]}, :x => time) %>
+</div>
+
+<div class='graph'>
+  <%= image_tag line_chart_url(:title => 'Rank', :y => player_statistics.map{|d| d[:rank]}, :x => time) %>
+</div>
