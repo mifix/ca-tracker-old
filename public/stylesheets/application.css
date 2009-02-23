@@ -1,5 +1,5 @@
 body {
-  background-color: #4B7399;
+  background:#2E2F2F url(../images/mbg.jpg) repeat-x scroll center 0px;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
 }
@@ -19,9 +19,9 @@ a {
 }
 
 #container {
-  width: 75%;
+  width: 50%;
   margin: 0 auto;
-  background-color: #FFF;
+  background-color: #F0F0F0;
   padding: 20px 40px;
   border: solid 1px black;
   margin-top: 20px;
