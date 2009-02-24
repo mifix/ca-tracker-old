@@ -19,12 +19,25 @@ class StatisticFetcher
           level_image_url "src", :type => :attribute 
         end
       end
+
+      stats '//ul[@class="record con-high"]' do
+        kills '/li[1]/span[1]'
+        deaths '/li[2]/span[1]'
+      end
+      
     end.to_hash
+ 
+    data[0][:kills] = data[2][:kills]
+    data[0][:deaths] = data[2][:deaths]
+    # TODO: Fixx this sh..
+    3.times { data.pop }
  
     # Remove formatting of numbers
     data[0][:experience].gsub!(/,/, '')
     data[0][:gear_points].gsub!(/,/, '')
     data[0][:rank].gsub!(/,/, '')
+    data[0][:kills].gsub!(/,/, '')
+    data[0][:deaths].gsub!(/,/, '')
     
     data
   end

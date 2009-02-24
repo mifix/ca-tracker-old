@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090222112202) do
+ActiveRecord::Schema.define(:version => 20090224183549) do
 
   create_table "players", :force => true do |t|
     t.string   "name"
@@ -26,6 +26,10 @@ ActiveRecord::Schema.define(:version => 20090222112202) do
     t.integer  "gear_points"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "kills"
+    t.integer  "deaths"
+    t.integer  "kill_diff",   :default => 1
+    t.integer  "death_diff",  :default => 1
   end
 
 end
