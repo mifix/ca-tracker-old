@@ -8,7 +8,11 @@
     <tr>
       <td><%= image_tag player.level_image_url %></td>
       <td><%=h player.name %></td>
-      <td><%= link_to "Show stats", player_statistics_path(player) %></td>
+      <% if player.has_statistics? %>
+        <td><%= link_to "Show stats", player_statistics_path(player) %></td>
+      <% else %>
+        <td>No stats yet</td>
+      <% end %>
     </tr>
   <% end %>
 </table>
