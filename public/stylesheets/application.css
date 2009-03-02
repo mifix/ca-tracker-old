@@ -85,3 +85,19 @@ a {
   margin-right: auto;
   margin-top: 10px; 
 }
+
+.footer {
+  width: 50%;
+  min-width: 750px;
+  margin: 0 auto;
+  color: gray;
+  background-color: transparent;
+  padding: 0px 40px;
+  border: none;
+  margin-top: 5px;
+  text-align: right;
+}
+
+.footer a {
+  color: #666666;
+}
