@@ -23,6 +23,7 @@ namespace :db do
     
     end
   
+    desc "Regenerate DB from backup yml files."
     task :read => [:environment, 'db:schema:load'] do 
 
       dir = RAILS_ROOT + '/db/backup'
